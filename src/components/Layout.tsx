@@ -57,5 +57,4 @@ export const Layout = () => {
 
 const StyledLayout = styled.div`
   font-family: ${defaultFontFamily};
-  height: 100vh;
 `;
