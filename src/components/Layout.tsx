@@ -1,7 +1,9 @@
 import { Error500Page } from "@/pages";
+import { defaultFontFamily } from "@/utils/fonts";
 import type { Portfolio } from "@/utils/types";
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router";
+import styled from "styled-components";
 
 export const Layout = () => {
   const [hasLoadingFailed, setHasLoadingFailed] = useState(false);
@@ -42,9 +44,23 @@ export const Layout = () => {
     requestPortfolio();
   }, []);
 
-  return portfolio ? (
-    <Outlet context={portfolio} />
-  ) : (
-    hasLoadingFailed && <Error500Page />
+  return (
+    <StyledLayout>
+      {portfolio ? (
+        <Outlet context={portfolio} />
+      ) : (
+        hasLoadingFailed && <Error500Page />
+      )}
+    </StyledLayout>
   );
 };
+
+const StyledLayout = styled.div`
+  font-family: ${defaultFontFamily};
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
