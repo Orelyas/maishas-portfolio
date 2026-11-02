@@ -58,9 +58,4 @@ export const Layout = () => {
 const StyledLayout = styled.div`
   font-family: ${defaultFontFamily};
   height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 `;

@@ -8,5 +8,5 @@ interface Project {
   date?: string;
   type: string;
   description: string;
-  asssets?: string[];
+  assets?: string[];
 }
