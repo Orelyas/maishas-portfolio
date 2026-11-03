@@ -45,16 +45,16 @@ export const Layout = () => {
   }, []);
 
   return (
-    <StyledLayout>
+    <LayoutContainer>
       {portfolio ? (
         <Outlet context={portfolio} />
       ) : (
         hasLoadingFailed && <Error500Page />
       )}
-    </StyledLayout>
+    </LayoutContainer>
   );
 };
 
-const StyledLayout = styled.div`
+const LayoutContainer = styled.div`
   font-family: ${defaultFontFamily};
 `;
