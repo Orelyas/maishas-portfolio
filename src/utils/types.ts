@@ -3,7 +3,7 @@ export interface Portfolio {
   projects: Project[];
 }
 
-interface Project {
+export interface Project {
   name: string;
   date?: string;
   type?: string;
