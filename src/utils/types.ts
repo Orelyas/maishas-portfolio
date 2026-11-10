@@ -1,12 +1,12 @@
 export interface Portfolio {
-  name: string;
+  name?: string;
   projects: Project[];
 }
 
-interface Project {
+export interface Project {
   name: string;
   date?: string;
-  type: string;
-  description: string;
-  asssets?: string[];
+  type?: string;
+  description?: string;
+  assets?: string[];
 }
